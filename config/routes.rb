@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :transactions, only: [:index, :create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
+      get '/current_user', to: 'auth#show'
 
       post "/graphql", to: "graphql#execute"
     end

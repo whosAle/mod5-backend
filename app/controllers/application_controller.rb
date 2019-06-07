@@ -13,7 +13,8 @@ class ApplicationController < ActionController::API
 
   def decoded_token
     if auth_header
-      token = auth_header.split(' ')[1]
+      token = auth_header
+      # token = auth_header.split(' ')[1]
       # header: { 'Authorization': 'Bearer <token>' }
       begin
         JWT.decode(token, ENV["SECRET_CODE"], true, algorithm: 'HS256')
@@ -24,6 +25,7 @@ class ApplicationController < ActionController::API
   end
 
   def current_user
+    # byebug
     if decoded_token
       user_id = decoded_token[0]['user_id']
       @user = User.find_by(id: user_id)
@@ -35,6 +37,7 @@ class ApplicationController < ActionController::API
   end
 
   def authorized
+    # puts "jwiofjklw"
     render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
   end
 end
