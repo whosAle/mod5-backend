@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       post "/users/query", to: "users#query"
       resources :users, only: [:index, :create]
-      resources :projects, only: [:index, :create]
+      resources :projects, only: [:index, :create, :update]
       resources :transactions, only: [:index, :create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'

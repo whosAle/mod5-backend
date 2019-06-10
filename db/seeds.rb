@@ -1,6 +1,7 @@
 
 
 User.create(username: "booswayne", password: "123")
+User.create(username: "jonk", password: "heavy")
 
 #PROJECTS
 Project.create(user_id: 1, location: "New York, NY" , base_capital: 100 , description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: "Agriculture" , completed: false, inprogress: false, title: "Community Clean Up!");
@@ -22,3 +23,7 @@ Project.create(user_id: 1, location: "New York, NY" , base_capital: 100 , descri
 Project.create(user_id: 1, location: "New York, NY" , base_capital: 100 , description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: "Agriculture" , completed: false, inprogress: false, title: "Community Clean Up!");
 
 Project.create(user_id: 1, location: "New York, NY" , base_capital: 100 , description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: "Agriculture" , completed: false, inprogress: false, title: "Community Clean Up!");
+
+Project.create(user_id: 1, location: "New York, NY" , base_capital: 100 , description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: "Agriculture" , completed: false, inprogress: false, title: "Community Clean Up!");
+
+Project.create(user_id: 1, location: "New York, NY" , base_capital: 1200 , description:"bad romANCE", category: "Agriculture" , completed: false, inprogress: false, title: "RAWRRRRRR");

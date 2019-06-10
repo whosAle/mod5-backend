@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_213249) do
 
   create_table "projects", force: :cascade do |t|
     t.integer "user_id"
+    t.integer "doer_id"
     t.integer "base_capital"
     t.string "location"
     t.string "title"

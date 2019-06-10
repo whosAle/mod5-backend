@@ -2,7 +2,9 @@
 class Types::ProjectType < Types::BaseObject
   description "A Project"
   field :id, ID, null: false
+  field :doer_id, ID, null: false
   field :base_capital, Integer, null: false
+  field :title, String, null: false
   field :user_id, Integer, null: false
   field :location, String, null: false
   field :description, String, null: false
