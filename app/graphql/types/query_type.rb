@@ -3,7 +3,6 @@ class Types::QueryType < Types::BaseObject
   graphql_name "Query"
   description "The query root of this schema"
 
-
 ####### USER MODEL QUERIES ############
   # First describe the field signature:
   field :user, Types::UserType, null: true do
@@ -11,9 +10,27 @@ class Types::QueryType < Types::BaseObject
     argument :id, ID, required: true
   end
 
+  field :project, Types::ProjectType, null: true do
+    description "Find a project by ID"
+    argument :id, ID, required: true
+  end
+
+  field :projects, Types::ProjectType, null: true do
+    description "Find a project by ID"
+  end
+
   # Then provide an implementation:
   def user(body)
     User.find(body[:id])
+  end
+
+  def project(body)
+    Project.find(body[:id])
+  end
+
+  def projects
+    byebug
+    Project.all
   end
 
 
