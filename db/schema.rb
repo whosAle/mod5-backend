@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_213249) do
     t.integer "user_id"
     t.integer "base_capital"
     t.string "location"
+    t.string "title"
     t.string "description"
     t.string "category"
     t.boolean "completed"

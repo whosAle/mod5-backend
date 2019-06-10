@@ -4,6 +4,7 @@ class CreateProjects < ActiveRecord::Migration[5.2]
       t.integer :user_id
       t.integer :base_capital
       t.string :location
+      t.string :title
       t.string :description
       t.string :category
       t.boolean :completed
