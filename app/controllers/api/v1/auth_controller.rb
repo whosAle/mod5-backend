@@ -22,7 +22,8 @@ class Api::V1::AuthController < ApplicationController
     # user = User.find_by(id: id)
     # byebug
     if current_user
-      render json: {id: current_user.id, username: current_user.username}
+      # render json: {id: current_user.id, username: current_user.username}
+      render json: current_user
     else
       render json: {error: "Could not authenticate"}, status: 401
     end
