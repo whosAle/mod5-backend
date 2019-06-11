@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_213249) do
     t.string "password_digest"
     t.string "bio"
     t.string "avatar"
-    t.integer "capital"
+    t.integer "capital", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
