@@ -3,7 +3,8 @@ class CreateProjects < ActiveRecord::Migration[5.2]
     create_table :projects do |t|
       t.integer :user_id
       t.integer :doer_id
-      t.integer :base_capital
+      t.integer :base_capital, default: 0
+      t.integer :total_capital, default: 0
       t.string :location
       t.string :title
       t.string :description

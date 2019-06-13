@@ -4,14 +4,14 @@ Rails.application.routes.draw do
     namespace :v1 do
       post "/users/query", to: "users#query"
       patch "/projects/complete", to: "projects#complete"
-      resources :users, only: [:index, :create]
-      resources :projects, only: [:index, :create, :update]
-      resources :transactions, only: [:index, :create]
       post '/login', to: 'auth#create'
       get '/profile', to: 'users#profile'
       get '/current_user', to: 'auth#show'
-
+      post '/transactions/contribute', to: 'transactions#contribute'
       post "/graphql", to: "graphql#execute"
+      resources :users, only: [:index, :create]
+      resources :projects, only: [:index, :create, :update]
+      resources :transactions, only: [:index, :create]
     end
   end
 

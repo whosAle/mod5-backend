@@ -18,7 +18,8 @@ ActiveRecord::Schema.define(version: 2019_06_05_213249) do
   create_table "projects", force: :cascade do |t|
     t.integer "user_id"
     t.integer "doer_id"
-    t.integer "base_capital"
+    t.integer "base_capital", default: 0
+    t.integer "total_capital", default: 0
     t.string "location"
     t.string "title"
     t.string "description"
@@ -33,6 +34,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_213249) do
     t.integer "user_id"
     t.integer "project_id"
     t.integer "amount"
+    t.string "purpose"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

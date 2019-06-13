@@ -29,6 +29,7 @@ class Api::V1::ProjectsController < ApplicationController
     render json: project
   end
 
+
   private
 
   def project_params
