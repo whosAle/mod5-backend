@@ -9,7 +9,6 @@ class Api::V1::UsersController < ApplicationController
       @token = encode_token(user_id: @user.id)
       render json: { user: @user, token: @token }, status: :created
     else
-      # puts "kljfwoiafklw" + @user.errors.full_message
       render json: { error: 'failed to create user'}, status: :not_acceptable
     end
   end

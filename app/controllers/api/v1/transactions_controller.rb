@@ -14,7 +14,7 @@ class Api::V1::TransactionsController < ApplicationController
       user.update(capital: user.capital - amount)
       project.update(total_capital: project.total_capital + amount)
 
-      render json: {user: user, project: project}, status: :created
+      render json: {user: UserSerializer.new(user), project: ProjectSerializer.new(project)}, status: :created
     end
 
   end
