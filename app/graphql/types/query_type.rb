@@ -29,7 +29,7 @@ class Types::QueryType < Types::BaseObject
   end
 
   def projects
-    byebug
+    # byebug
     Project.all
   end
 

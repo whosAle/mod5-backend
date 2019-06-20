@@ -4,7 +4,7 @@ class Api::V1::UsersController < ApplicationController
   def create
     # @user = User.create(user_params)
     @user = User.create(username: params[:username], first_name: params[:first_name], last_name: params[:last_name], bio: params[:bio], avatar: params[:avatar], password: params[:password])
-    byebug
+    # byebug
     if @user.valid?
       @token = encode_token(user_id: @user.id)
       render json: { user: @user, token: @token }, status: :created

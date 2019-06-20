@@ -10,7 +10,7 @@ class Types::MutationType < Types::BaseObject
     project = Project.find(args[:id])
     project.update(doer_id: 1, inprogress: true)
     # project.update(doer_id: args[:doer_id], inprogress: true)
-    byebug
+    # byebug
     project
   end
 end

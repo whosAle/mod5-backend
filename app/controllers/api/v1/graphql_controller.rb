@@ -7,7 +7,7 @@ class Api::V1::GraphqlController < ApplicationController
       # Query context goes here, for example:
       # current_user: current_user,
     }
-    byebug
+    # byebug
     result = Schema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
   rescue => e
