@@ -18,6 +18,11 @@ class Api::V1::UsersController < ApplicationController
     render json: result
   end
 
+  def show
+    user = User.find(params[:id])
+    render json: user
+  end
+
   def query
     result = Schema.execute params[:query]
     render json: result

@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       get '/current_user', to: 'auth#show'
       post '/transactions/contribute', to: 'transactions#contribute'
       post "/graphql", to: "graphql#execute"
-      resources :users, only: [:index, :create]
+      resources :users, only: [:index, :show, :create]
       resources :projects, only: [:index, :create, :update]
       resources :transactions, only: [:index, :create]
     end
