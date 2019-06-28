@@ -3,6 +3,12 @@ class Api::V1::ProjectsController < ApplicationController
     render json: Project.all
   end
 
+  def show
+    project = Project.find(params[:id])
+    byebug
+    render json: project
+  end
+
   def create
     @project = Project.create(project_params)
     if @project.valid?

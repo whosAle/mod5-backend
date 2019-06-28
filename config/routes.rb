@@ -10,7 +10,7 @@ Rails.application.routes.draw do
       post '/transactions/contribute', to: 'transactions#contribute'
       post "/graphql", to: "graphql#execute"
       resources :users, only: [:index, :show, :create]
-      resources :projects, only: [:index, :create, :update]
+      resources :projects, only: [:index, :show, :create, :update]
       resources :transactions, only: [:index, :create]
     end
   end
