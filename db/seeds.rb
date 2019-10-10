@@ -2,6 +2,7 @@
 
 User.create(username: "booswayne", password: "123", first_name: "John", last_name: "Doe")
 User.create(username: "jonk", password: "heavy", capital: 500, first_name: "Velma", last_name: "Doo")
+User.create(username: "test", password: "testacct", capital: 500, first_name: "Jane", last_name: "Smith")
 
 #PROJECTS
 Project.create(user_id: 1, doer_id: 2, location: "New York, NY" , base_capital: 100 , description:"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", category: "Agriculture" , completed: false, inprogress: true, title: "Community Clean Up!");

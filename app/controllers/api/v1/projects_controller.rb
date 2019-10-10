@@ -5,7 +5,7 @@ class Api::V1::ProjectsController < ApplicationController
 
   def show
     project = Project.find(params[:id])
-    byebug
+    # byebug
     render json: project
   end
 
